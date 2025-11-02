@@ -139,26 +139,21 @@ function checkWin() {
   }
 }
 
-/* virtual keyboard listener 
+// ⌨️ Listen for keyboard input when the page loads
+// window.addEventListener("keydown", function (event) {
+//   let key = event.key.toLowerCase();
 
-document.addEventListener(
-    "keydown",
-    e => {
-        if (e.key === "ArrowUp") keyboard.modules.keyNavigation.up();
-        else if (e.key === "ArrowDown") keyboard.modules.keyNavigation.down();
-        else if (e.key === "ArrowLeft") keyboard.modules.keyNavigation.left();
-        else if (e.key === "ArrowRight") keyboard.modules.keyNavigation.right();
-        else if (e.key === "Enter") keyboard.modules.keyNavigation.press();
-    },
-    false    
-);
-
-*/
+//   // Only process alphabetic letters (ignore Shift, Enter, etc.)
+//   if (key.match(/^[a-z]$/)) {
+//     startGame(key);
+//   } else {
+//     console.log("Please press a valid letter (A–Z).");
+//   }
+// });
 
 // ⌨️ Listen for keyboard input when the page loads
 window.addEventListener("keydown", function (event) {
   let key = event.key.toLowerCase();
-
   // Only process alphabetic letters (ignore Shift, Enter, etc.)
   if (key.match(/^[a-z]$/)) {
     startGame(key);
@@ -166,3 +161,11 @@ window.addEventListener("keydown", function (event) {
     console.log("Please press a valid letter (A–Z).");
   }
 });
+
+//   if (event.key === "ArrowUp") keyboard.modules.keyNavigation.up();
+//   else if (event.key === "ArrowDown") keyboard.modules.keyNavigation.down();
+//   else if (event.key === "ArrowLeft") keyboard.modules.keyNavigation.left();
+//   else if (event.key === "ArrowRight") keyboard.modules.keyNavigation.right();
+//   else if (event.key === "Enter") keyboard.modules.keyNavigation.press();
+// }, false);
+

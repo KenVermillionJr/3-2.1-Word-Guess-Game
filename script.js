@@ -139,6 +139,22 @@ function checkWin() {
   }
 }
 
+/* virtual keyboard listener 
+
+document.addEventListener(
+    "keydown",
+    e => {
+        if (e.key === "ArrowUp") keyboard.modules.keyNavigation.up();
+        else if (e.key === "ArrowDown") keyboard.modules.keyNavigation.down();
+        else if (e.key === "ArrowLeft") keyboard.modules.keyNavigation.left();
+        else if (e.key === "ArrowRight") keyboard.modules.keyNavigation.right();
+        else if (e.key === "Enter") keyboard.modules.keyNavigation.press();
+    },
+    false    
+);
+
+*/
+
 // ⌨️ Listen for keyboard input when the page loads
 window.addEventListener("keydown", function (event) {
   let key = event.key.toLowerCase();

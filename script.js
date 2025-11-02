@@ -1,5 +1,39 @@
 // Starter Word Guess Game — Keyboard Input Ready
 
+// begin virtual keyboard
+
+const Keyboard = window.SimpleKeyboard.default;
+const keyNavigation = window.SimpleKeyboardKeyNavigation.default;
+
+const keyboard = new Keyboard({
+  onChange: input => onChange(input),
+  onKeyPress: button => onKeyPress(button),
+  useMouseEvents: true,
+  enableKeyNavigation: true,
+  modules: [
+    keyNavigation
+  ],
+  onModulesLoaded: keyboard => {
+    /**
+     * Optional: If keyboard.modules is not available below.
+     * You can call module methods here
+     * e.g: keyboard.modules.keyNavigation.up();
+     * etc.
+     */
+  }
+});
+
+function onChange(input) {
+  document.querySelector(".input").value = input;
+  console.log("Input changed", input);
+}
+
+function onKeyPress(button) {
+  console.log("Button pressed", button);
+}
+
+// end virtual keyboard
+
 // Word bank
 const words = ["javascript", "array", "loop", "json", "linux"];
 
@@ -31,34 +65,6 @@ const message = document.getElementById("message");
 
 // 🎮 Function students will build next
 function startGame(letter) {
-
-  // /* set focus on hidden input element for keyboard on mobile */
-  // const kb = document.getElementById("kb");
-  // // check once DOM loading is complete
-  // if (kb) {
-  //   const kbTrigger = kb.trigger("focus");
-  // }
-
-  // // Virtual Keyboard Default Theme
-  // const Keyboard = window.SimpleKeyboard.default;
-  // // initialize
-  // const myKeyboard = new Keyboard({
-  //   onChange: input => onChange(input),
-  //   onKeyPress: button => onKeyPress(button)
-  // });
-  // // events
-  // function onChange(input) {
-  //   document.querySelector(".input").value = input;
-  //   console.log("Input changed", input);
-  // }
-  // function onKeyPress(button) {
-  //   console.log("Button pressed", button);
-  // }
-
-  /* address mobile keyboard activation issue */
-  // const receiveLetter = document.getElementById("maskedWord");
-  // receiveLetter.focus(); 
-  // window.alert(`You pressed: ${letter}`);
 
   console.log(`You pressed: ${letter}`);
 
@@ -109,13 +115,6 @@ function updateDisplay() {
 
   // TEST
   console.log(`Updating guessed letters: ${guessedLetters.join(', ')}`)
-
-  // /* set focus on hidden input element for keyboard on mobile */
-  // const kb = document.getElementById("kb");
-  // // check once DOM loading is complete
-  // if (kb) {
-  //   const kbTrigger = kb.trigger("focus");
-  // }a
 
 } // end function
 

@@ -6,7 +6,7 @@ Work to complete an interactive **Word Guess Game** where players type letters o
 
 #Changelog
 
-2025-11-03  |   Add responsive virtual keyboard
+2025-11-03  |   Added responsive virtual keyboard
 
 ## 👤 User Story
 

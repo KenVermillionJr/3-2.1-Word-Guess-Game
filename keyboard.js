@@ -33,7 +33,7 @@ function onChange(input) {
 }
 
 function onKeyPress(button) {
-    // console.log("Button pressed", button);
+    console.log("Button pressed", button);
     if (button.match(/^[a-z]$/)) {
         console.log(`You entered a valid letter: ${button}`);
         youWon.play();

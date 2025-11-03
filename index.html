@@ -13,6 +13,7 @@
     />
 
      <style>
+
       body {
         background: linear-gradient(135deg, #1e3c72, #2a5298);
         color: #fff;
@@ -21,8 +22,7 @@
         display: flex;       
         justify-content: center;
         align-items: flex-start;
-        margin: 5rem;
-        
+        margin: 5rem;        
       }
 
       .game-card {
@@ -30,7 +30,7 @@
         backdrop-filter: blur(8px);
         border-radius: 16px;
         padding: 2rem;
-        max-width: 450px;
+        max-width: 500px;
         text-align: center;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
       }
@@ -52,12 +52,12 @@
         text-align: center;
       }
 
-      .input {
-        display: flex;
-        margin: 5rem 5rem;
+      /* show keys black */
+      #inputTxt {
         color: black;
       }
-    </style>
+
+   </style>
 
      <!-- merged with virtual keyboard style -->
     <link rel="stylesheet" href="./style.css">
@@ -99,7 +99,7 @@
    
       <!-- place virtual keyboard -->
       <input type="text" class="input" style="opacity:0; filter:alpha(opacity=0);">
-      <div class="simple-keyboard"></div>
+      <div class="simple-keyboard" id="inputTxt"></div>
 
     </div>
 

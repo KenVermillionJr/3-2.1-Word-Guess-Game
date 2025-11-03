@@ -34,6 +34,7 @@ const message = document.getElementById("message");
 const Keyboard = window.SimpleKeyboard.default;
 const keyNavigation = window.SimpleKeyboardKeyNavigation.default;
 
+
 const keyboard = new Keyboard({
   onChange: input => onChange(input),
   onKeyPress: button => onKeyPress(button),
@@ -60,10 +61,10 @@ const keyboard = new Keyboard({
 
 });
 
-// function onChange(input) {
-//   document.querySelector(".input").value = input;
-//   console.log("Input changed", input);
-// }
+function onChange(input) {
+  document.querySelector(".input").value = input;
+  console.log("Input changed", input);
+}
 
 function onKeyPress(button) {
   console.log("Button pressed", button);

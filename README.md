@@ -2,6 +2,9 @@
 
 Work to complete an interactive **Word Guess Game** where players type letters on their keyboard to guess a hidden coding term or a topic of your choosing.
 
+## Solved:
+<a href="https://kenvermillionjr.github.io/3-2.1-Word-Guess-Game/"> Play Word Guess Game V.2.0</a>
+
 ---
 
 ## Changelog

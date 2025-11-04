@@ -7,6 +7,9 @@ const words = ["array", "loop", "json", "linux", "html", "css", "javascript", "p
 // Randomly select one word from the list
 let chosenWord = words[Math.floor(Math.random() * words.length)];
 
+// Ensure chosenWord is lowercase
+chosenWord = chosenWord.toLowerCase;
+
 // Track guessed letters and remaining attempts
 let guessedLetters = [];
 let attemptsLeft = 10;

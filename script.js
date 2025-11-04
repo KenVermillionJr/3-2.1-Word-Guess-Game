@@ -21,7 +21,7 @@ const lost = document.querySelector('#youLost')
 // lost.play();
 
 // Log the chosen word for debugging
-console.log("Chosen word:", chosenWord);
+// console.log("Chosen word:", chosenWord);
 
 // DOM Elements
 const maskedWordElm = document.getElementById("maskedWord");

@@ -1,7 +1,7 @@
 // Starter Word Guess Game — Keyboard Input Ready
 
 // Word bank
-const words = ["javascript", "array", "loop", "json", "linux"];
+const words = ["javascript", "array", "loop", "json", "linux", "HTML", "CSS", "JS", "React", "Vue", "Angular", "Svelte", "Nextjs", "Node", "Express", "Python", "Django", "Flask", "Ruby", "Rails", "PHP", "Laravel", "Perl", "Go", "Rust", "API", "JSON", "Axios", "Fetch", "GraphQL", "SQLite", "MySQL", "MongoDB", "Redis", "Server", "Client", "Deploy", "Render", "Commit", "Branch", "Merge", "Git", "Github", "Gitlab", "Docker", "Nginx", "Apache", "Static", "Dynamic", "Layout", "Canvas", "Button", "Footer", "Header", "Navbar", "Sidebar", "Widget", "Module", "Router", "Socket", "Cookie", "Token", "Schema", "Script", "Markup", "Styles", "Design", "Assets", "Upload", "Config", "Import", "Export", "Bundle", "Cursor", "Prompt", "Filter", "Option", "Select", "Submit", "Output", "Request", "Response", "Session", "Element", "Storage", "Hosting", "Domain", "Backup", "Proxy", "Inline", "Center", "Footer", "Iframe", "Anchor", "Plugin", "Widget", "Package", "Version", "Console", "Promise"];
 
 // Randomly select one word from the list
 let chosenWord = words[Math.floor(Math.random() * words.length)];

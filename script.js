@@ -51,7 +51,7 @@ const keyboard = new Keyboard({
      * etc.
      */
   }
-  /* add custom layout qwerty lowercase */
+  /* add custom layout alpha lowercase */
   , layout: {
     default: [
       "q w e r t y u i o p",

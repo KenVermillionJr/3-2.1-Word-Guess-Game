@@ -54,7 +54,6 @@ updateDisplay();
 const Keyboard = window.SimpleKeyboard.default;
 const keyNavigation = window.SimpleKeyboardKeyNavigation.default;
 
-
 const keyboard = new Keyboard({
   onChange: input => onChange(input),
   onKeyPress: button => onKeyPress(button),

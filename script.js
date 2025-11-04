@@ -30,6 +30,25 @@ const attemptsElm = document.getElementById("attempts");
 const guessedLettersElm = document.getElementById("guessedLetters");
 const message = document.getElementById("message");
 
+// Reveal guessed chars leaving unguessed masked "_"
+function updateDisplay() {
+  let masked = '';
+  for (let char of chosenWord) {
+    masked += guessedLetters.includes(char) ? char : '_';
+    masked += ' ';
+  } // end for .. of
+
+  maskedWordElm.textContent = masked.trim();
+  attemptsElm.textContent = attemptsLeft;
+  guessedLettersElm.textContent = guessedLetters.join(', ') || 'not yet';
+
+  // TEST
+  console.log(`Updating guessed letters: ${guessedLetters.join(', ')}`)
+
+} // end function
+
+updateDisplay();
+
 // begin virtual keyboard
 
 const Keyboard = window.SimpleKeyboard.default;
@@ -112,23 +131,6 @@ function onKeyPress(button) {
     // update display
     updateDisplay();
   }
-
-  // Reveal guessed chars leaving unguessed masked "_"
-  function updateDisplay() {
-    let masked = '';
-    for (let char of chosenWord) {
-      masked += guessedLetters.includes(char) ? char : '_';
-      masked += ' ';
-    } // end for .. of
-
-    maskedWordElm.textContent = masked.trim();
-    attemptsElm.textContent = attemptsLeft;
-    guessedLettersElm.textContent = guessedLetters.join(', ') || 'not yet';
-
-    // TEST
-    console.log(`Updating guessed letters: ${guessedLetters.join(', ')}`)
-
-  } // end function
 
   function checkWin() {
     const won = chosenWord.split('').every(letter => guessedLetters.includes(letter));

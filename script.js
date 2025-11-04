@@ -157,18 +157,6 @@ function onKeyPress(button) {
 
 // end virtual keyboard
 
-// ⌨️ Listen for keyboard input when the page loads
-// window.addEventListener("keydown", function (event) {
-//   let key = event.key.toLowerCase();
-
-//   // Only process alphabetic letters (ignore Shift, Enter, etc.)
-//   if (key.match(/^[a-z]$/)) {
-//     startGame(key);
-//   } else {
-//     console.log("Please press a valid letter (A–Z).");
-//   }
-// });
-
 document.addEventListener(
   "keydown",
   e => {
